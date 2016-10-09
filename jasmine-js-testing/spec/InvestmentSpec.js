@@ -8,26 +8,23 @@ var stock, investment;
     stock = new Stock();
     investment = new Investment({
       stock: stock,
-      shares: 100
+      shares: 100,
+      sharePrice: 20
     });
   });
   // Given an investment, it should be of a stock
   it("should be of a stock", function() {
-    // var stock = new Stock();
-    // var investment = new Investment({
-    //   stock: stock,
-    //   shares: 100
-    // });
     expect(investment.stock).toBe(stock);
   });
 
   // Given an investment, it should have the invested shares quantity
   it("should have the invested shares quantity", function() {
-    // var stock = new Stock();
-    // var investment = new Investment({
-    //   stock:  stock,
-    //   shares: 100
-    // });
     expect(investment.shares).toEqual(100);
   });
+
+  // Given an investment, it should have the share paid price
+  it("should have the share price user has paid", function() {
+    expect(investment.sharePrice).toEqual(20);
+  });
+
 });
