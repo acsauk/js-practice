@@ -37,8 +37,14 @@ var stock, investment;
       stock.sharePrice = 40;
     });
 
+    // Given an investment, when its stock share price increases, it should have
+    // a positive return of investment (ROI);
     it("should have a positive return on investment", function() {
       expect(investment.roi()).toEqual(1);
+    });
+
+    it("should be a 'good' investment", function() {
+      expect(investment.isGood()).toBeTruthy();
     });
   });
 
