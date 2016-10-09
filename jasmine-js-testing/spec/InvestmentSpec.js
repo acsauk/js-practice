@@ -48,4 +48,14 @@ var stock, investment;
     });
   });
 
+  describe("when its stock share price decreases", function() {
+    beforeEach(function() {
+      stock.sharePrice = 0;
+    });
+
+    it("should be a 'bad' investment", function() {
+      expect(investment).not.toBeAGoodInvestment();
+    });
+  });
+
 });

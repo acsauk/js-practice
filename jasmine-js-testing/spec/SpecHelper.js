@@ -3,12 +3,17 @@ beforeEach(function () {
     toBeAGoodInvestment: function(util, customEqualityTesters) {
       return {
         compare: function(actual, expected) {
-          var passed = actual.isGood() === true;
           return {
-            pass: passed,
-            message: "Expected good investment to be true; instead got " + actual.isGood()
+            pass: actual.isGood() === true,
+            message: "Expected investment to be a good investment"
           }
-          return result;
+        },
+
+        negativeCompare: function(actual, expected) {
+          return {
+            pass: actual.isGood() === false,
+            message: "Expected investment to be a bad investment"
+          }
         }
       }
     }
