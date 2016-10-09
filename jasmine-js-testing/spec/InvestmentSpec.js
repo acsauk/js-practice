@@ -27,4 +27,9 @@ var stock, investment;
     expect(investment.sharePrice).toEqual(20);
   });
 
+  // Given an investment, it should have a cost
+  it("should have the cost of the investment", function() {
+    expect(investment.cost).toEqual(2000);
+  });
+
 });
