@@ -1,1 +1,3 @@
-function Investment () {}
+function Investment (stock) {
+  this.stock = stock;
+};
