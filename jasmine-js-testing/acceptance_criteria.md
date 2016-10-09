@@ -11,3 +11,7 @@ Given an investment, it should have the invested shares quantity
 Given an investment, it should have the share paid price
 
 Given an investment, it should have a cost
+
+Given an investment, when its stock share price increases, it should have a positive return of investment (ROI);
+
+Given an investment, when its stock share price increases, it should be a good investment.

@@ -32,4 +32,14 @@ var stock, investment;
     expect(investment.cost).toEqual(2000);
   });
 
+  describe("when it's stock share price increases", function() {
+    beforeEach(function() {
+      stock.sharePrice = 40;
+    });
+
+    it("should have a positive return on investment", function() {
+      expect(investment.roi()).toEqual(1);
+    });
+  });
+
 });
