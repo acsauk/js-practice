@@ -44,7 +44,7 @@ var stock, investment;
     });
 
     it("should be a 'good' investment", function() {
-      expect(investment.isGood()).toBeTruthy();
+      expect(investment).toBeAGoodInvestment();
     });
   });
 

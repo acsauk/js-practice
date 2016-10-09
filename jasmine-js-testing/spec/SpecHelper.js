@@ -1,15 +1,16 @@
 beforeEach(function () {
   jasmine.addMatchers({
-    toBePlaying: function () {
+    toBeAGoodInvestment: function(util, customEqualityTesters) {
       return {
-        compare: function (actual, expected) {
-          var player = actual;
-
+        compare: function(actual, expected) {
+          var passed = actual.isGood() === true;
           return {
-            pass: player.currentlyPlayingSong === expected && player.isPlaying
-          };
+            pass: passed,
+            message: "Expected good investment to be true; instead got " + actual.isGood()
+          }
+          return result;
         }
-      };
+      }
     }
   });
 });
